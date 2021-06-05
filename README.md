@@ -1,5 +1,13 @@
 # My-contacts API
 
+## Setup
+ ``` 
+  python manage.py migrate 
+  python manage.py loaddata my_contacts/fixtures/*.json
+  ./manage.py createsuperuser2 --username renan --password 1234 --noinput --email 'renan@teste.com'
+  python manage.py runserver
+ ```
+
 ## Basic Auth 
  ``` 
   username: renan

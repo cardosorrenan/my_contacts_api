@@ -4,7 +4,7 @@ from .serializers import PersonSerializer, PhoneSerializer
 
 
 class PersonViewset(viewsets.ModelViewSet):
-    queryset = Person.objects.all()
+    queryset = Person.objects.all().order_by('updated_at').reverse()
     serializer_class = PersonSerializer
 
 
