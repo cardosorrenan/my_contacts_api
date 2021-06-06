@@ -17,7 +17,7 @@ class Person(models.Model):
 
 class Phone(models.Model):
   person = models.ForeignKey(Person, related_name='phones', on_delete=models.CASCADE)
-  number = models.CharField(max_length=15)
+  number = models.CharField(max_length=14, unique=True)
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
 
